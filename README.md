@@ -12,5 +12,9 @@ Check out the WS2812IR_No_Blocking.ino sketch!  It doesn't utilise the library, 
 
 ----------
 
-More coming soon...
+*More coming soon...*
 
+
+Big thanks to @J-M-L over at Arduino Forum!
+
+https://forum.arduino.cc/t/can-i-include-a-library-in-my-own-library/1066814
