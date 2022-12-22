@@ -15,6 +15,13 @@ This library requires IRremote.h and Adafruit_NeoPixel.h libraries to be install
 
 Check out the WS2812IR_No_Blocking.ino sketch!  It doesn't utilise the library, and it's code is completely non-blocking.
 
+Newly added: WS2812IR_No_Blocking_with_Modes.ino is a new sketch that includes 4 "modes", along with the basic color changing and brightness altering of the previous none blocking sketch!  The "modes" are:
+* Strobe (3 LEDs flash, then switch to the other 3)
+* Chase (single LED pattern, appears to be going along the strip)
+* Lightning (looks like lightning, random pixels flash with random times between)
+* Rainbow (a gliding rainbow)
+* Fireflies (multiple pixels randomly pulse, looks like fireflies!)
+
 ----------
 
 *More coming soon...*
