@@ -33,7 +33,7 @@ unsigned long firstpixelhue=0;
 
 struct structu {
   int value=0;
-  int lastm=0;
+  unsigned long lastm=0;
   int timeb=0;
   int number=0;
   bool rising=true;
