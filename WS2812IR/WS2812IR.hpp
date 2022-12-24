@@ -1,5 +1,5 @@
 /*************************************************************
-File Name: WS2812IR.ino
+File Name: WS2812IR.hpp
 Processor/Platform: Arduino (Nano tested)
 Development Environment: Arduino 2.0.13
 
