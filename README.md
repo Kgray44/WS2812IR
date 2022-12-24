@@ -6,10 +6,25 @@ This library is for using WS2812 LEDs with a IR Remote!
 
 I hope to do a complete do-over of this library soon, as all of it's code is blocking.  This will not seem to be an issue, besides a delay of up to 2 seconds from when an IR remote button is pressed.  The library, as is though, works and functions correctly!
 
+Check the docs for more information.
+
+*Edit: Do-over complete!*
+
 ### Dependencies
 
 This library requires IRremote.h and Adafruit_NeoPixel.h libraries to be installed before use.
 
+## WS2812IR_NB Library
+
+This library is for using WS2812 LEDs with a IR Remote!
+
+This version ("_NB") is a Non-Blocking version.  So it runs very fast, resulting in no delay between a button press on the remote, and the response by the LEDs.
+
+Check the docs for more information.
+
+### Dependencies
+
+This library requires IRremote.h and Adafruit_NeoPixel.h libraries to be installed before use.
 
 ## WS2812IR Code Collection
 
