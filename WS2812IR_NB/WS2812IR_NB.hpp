@@ -70,6 +70,7 @@ class WS2812IR_NB
     unsigned long hue=0;
 
     unsigned long lastmillis=0;
+    unsigned long lastmilliss=0;
 
     int modeAmount = 6;
     int hueinc = 1000;
@@ -123,17 +124,17 @@ class WS2812IR_NB
     }
     
     void lightning(int ledoffdelay=500,int ledondelay=50){//recommended lower delays for a longer strip
-      if (millis() - lastmillis > t && !flash){
+      if (millis() - lastmilliss > t && !flash){
         pixels->setPixelColor(p,pixels->Color(255,255,255));
         pixels->show();
         flash = true;
-        lastmillis = millis();
+        lastmilliss = millis();
       }
-      else if (millis() - lastmillis > d && flash){
+      else if (millis() - lastmilliss > d && flash){
         pixels->setPixelColor(p,pixels->Color(0,0,0));
         pixels->show();
         flash = false;
-        lastmillis = millis();
+        lastmilliss = millis();
         t = random(10,ledoffdelay);
         d = random(4,ledondelay);
         p = random(0,pixelsCount);
