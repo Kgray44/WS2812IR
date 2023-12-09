@@ -1,5 +1,5 @@
 /*************************************************************
-File Name: Example3_IRModes.ino
+File Name: WS2812IR_NB-Christmas.ino
 Processor/Platform: Arduino (D1-mini tested)
 Development Environment: Arduino 2.2.1
 
