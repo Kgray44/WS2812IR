@@ -4,6 +4,7 @@ striphue	KEYWORD2
 rainbow		KEYWORD2
 lightning	KEYWORD2
 chase		KEYWORD2
+chaseC  KEYWORD2
 strobe		KEYWORD2
 fireflies	KEYWORD2
 off		KEYWORD2
