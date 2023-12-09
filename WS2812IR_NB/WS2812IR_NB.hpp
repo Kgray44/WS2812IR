@@ -205,6 +205,44 @@ class WS2812IR_NB
       }
     }
 
+    void chaseC(int R, int G, int B, int speed){
+      if (millis() - lastmillis > speed){
+        if (section == 1){
+          currentpixel=currentpixel+3;
+          pixels->setPixelColor(currentpixel,pixels->Color(R,G,B));
+          pixels->setPixelColor(currentpixel-1,pixels->Color(0,0,0));
+          if (currentpixel >= pixelsCount){
+            pixels->show();
+            currentpixel=1;
+            section = 2;
+            lastmillis = millis();
+          }
+        }
+        else if (section == 2){
+          currentpixel=currentpixel+3;
+          pixels->setPixelColor(currentpixel,pixels->Color(R,G,B));
+          pixels->setPixelColor(currentpixel-1,pixels->Color(0,0,0));
+          if (currentpixel >= pixelsCount){
+            pixels->show();
+            currentpixel=2;
+            section = 3;
+            lastmillis = millis();
+          }
+        }
+        else {
+          currentpixel=currentpixel+3;
+          pixels->setPixelColor(currentpixel,pixels->Color(R,G,B));
+          pixels->setPixelColor(currentpixel-1,pixels->Color(0,0,0));
+          if (currentpixel >= pixelsCount){
+            pixels->show();
+            currentpixel=0;
+            section = 1;
+            lastmillis = millis();
+          }
+        }
+      }
+    }
+
     void fireflies(int amount=15, int timeon=1000, int timeoff=12000){
       pc++; if (pc>amount){pc=0;}
       if (millis() - pixelF[pc].lastm > pixelF[pc].timeb){
