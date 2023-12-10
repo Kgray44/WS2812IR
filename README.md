@@ -32,7 +32,7 @@ This library requires IRremote.h and Adafruit_NeoPixel.h libraries to be install
 
 Check out the WS2812IR_No_Blocking.ino sketch!  It doesn't utilise the library, and it's code is completely non-blocking.
 
-Newly added: WS2812IR_No_Blocking_with_Modes.ino is a new sketch that includes 4 "modes", along with the basic color changing and brightness altering of the previous none blocking sketch!  The "modes" are:
+WS2812IR_No_Blocking_with_Modes.ino is a new sketch that includes 4 "modes", along with the basic color changing and brightness altering of the previous none blocking sketch!  The "modes" are:
 * Strobe (3 LEDs flash, then switch to the other 3)
 * Chase (single LED pattern, appears to be going along the strip and takes a hue value)
 * ChaseC (single LED pattern, appears to be going along the strip and takes a RGB value)
@@ -41,8 +41,11 @@ Newly added: WS2812IR_No_Blocking_with_Modes.ino is a new sketch that includes 4
 * Fireflies (multiple pixels randomly pulse, looks like fireflies!)
 * Popcorn (red pixels that suddenly randomly turn white; red kernel popcorn popping)
 
+**Newly added**: WS2812IR_NB-Christmas.ino is a brand new sketch that utilizes my _NB library!  It includes demonstrations on multicolored single functions, and also stacked functions.  It shows how to run multiple functions one aft another based on a simple timer setup, so there is not a single "delay" in the entire sketch or library!!
+
 *Note*
-To change the color of the LEDs running in a function, just call "wsir.hue = 3000" (takes a hue value from 0 to 65536).  This will set the color for the next function(s) that you run.  The color can also be reset while the function is running, resulting in multicolored functions (take a look at "WS2812IR_NB-Christmas.ino").
+
+To change the color of the LEDs running in a function, just call "wsir.hue = 3000;" (takes a hue value from 0 to 65536).  This will set the color for the next function(s) that you run.  The color can also be reset while the function is running, resulting in multicolored functions (take a look at "WS2812IR_NB-Christmas.ino").  Multiple functions can even be run at the same time... basically stacking effects!
 
 ----------
 
