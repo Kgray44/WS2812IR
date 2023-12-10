@@ -27,10 +27,6 @@ https://opensource.org/licenses/MIT
 
 #include <WS2812IR_NB.hpp>
 
-int sections = 1;
-int currentpixels = 1;
-unsigned long lastmillis = 0;
-boolean firsts = false;
 unsigned long curmillis = 0;
 unsigned long lastmil = 0;
 
