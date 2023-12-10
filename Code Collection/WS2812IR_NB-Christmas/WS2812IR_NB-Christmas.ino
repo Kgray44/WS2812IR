@@ -72,6 +72,7 @@ void loop(){
     if (flag){wsir.hue = color(105);}
     else {wsir.hue = color(0);}
     wsir.chase(100);
+    wsir.lightning(100,40);
     yield();
   }
   int i=255;
@@ -89,6 +90,7 @@ void loop(){
   wsir.hue = 0;
   while (millis() < curmillis+26000){
     wsir.strobe(150);
+    wsir.lightning(100,40);
     yield();
   }
   unsigned long val = wsir.hue;
@@ -96,11 +98,13 @@ void loop(){
     if (millis() - lastmil >= 1){val = val+12;lastmil=millis();}
     wsir.hue = val;//19115
     wsir.strobe(150);
+    wsir.lightning(100,40);
     yield();
   }
   wsir.hue = color(105);
   while (millis() < curmillis+31000){
     wsir.strobe(150);
+    wsir.lightning(100,40);
     yield();
   }
   flag = false;
@@ -109,12 +113,14 @@ void loop(){
     if (flag){wsir.hue = color(105);}
     else {wsir.hue = color(0);}
     wsir.chase(100);
+    wsir.lightning(100,40);
     yield();
   }
   i=255;
   while (i!=0){
     if (millis() - lastmil >= 10){i--;lastmil = millis();}
     wsir.chaseC(i,0,0,100);
+    wsir.lightning(100,40);
     yield();
   }
   curmillis = curmillis+(lastmil-curmillis-35000);
