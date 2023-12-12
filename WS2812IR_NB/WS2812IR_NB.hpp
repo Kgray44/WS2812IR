@@ -272,6 +272,12 @@ class WS2812IR_NB
             pixelF[pc].lastm=millis();
             pixelF[pc].rising=true;
             pixelF[pc].number=random(0,pixelsCount);
+            //reduces flickering due to overlapping previous firefly pixels that are still running
+	          for (int t=0;t<=amount;t++){
+	            if (pixelF[t].number == pixelF[pc].number){
+	              pc++;//pixelF[pc].number=pixelF[pc].number+1;
+              }
+            }
           }
         }
       }
